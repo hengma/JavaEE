@@ -10,7 +10,6 @@ import org.junit.Test;
 
 import beo.StudentVO;
 import facades.StatefulFacadSessionRemote;
-import facades.StatelessFacadSessionBean;
 import facades.StatelessFacadSessionRemote;
 import facades.StudentFacadeSessionRemote;
 
