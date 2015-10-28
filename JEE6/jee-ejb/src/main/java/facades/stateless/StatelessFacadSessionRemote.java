@@ -1,4 +1,4 @@
-package facades;
+package facades.stateless;
 
 
 public interface StatelessFacadSessionRemote {

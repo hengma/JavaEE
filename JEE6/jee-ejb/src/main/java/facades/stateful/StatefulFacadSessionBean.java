@@ -1,4 +1,4 @@
-package facades;
+package facades.stateful;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
