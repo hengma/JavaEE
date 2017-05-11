@@ -8,10 +8,11 @@ import javax.naming.NamingException;
 
 import org.junit.Test;
 
-import beo.StudentVO;
-import facades.StatefulFacadSessionRemote;
-import facades.StatelessFacadSessionRemote;
 import facades.StudentFacadeSessionRemote;
+import facades.stateful.StatefulFacadSessionRemote;
+import facades.stateless.StatelessFacadSessionRemote;
+import beo.StudentVO;
+
 
 public class JunitTest {
 
@@ -42,7 +43,7 @@ public class JunitTest {
 			System.out.println("===================");
 			System.out.println("      Stateless:    ");
 			System.out.println("===================");
-			StatelessFacadSessionRemote statelessRemote = (StatelessFacadSessionRemote) context.lookup("/jee/jee-ejb/StatelessFacadSessionBean!facades.StatelessFacadSessionRemote");
+			StatelessFacadSessionRemote statelessRemote = (StatelessFacadSessionRemote) context.lookup("/jee/jee-ejb/StatelessFacadSessionBean!facades.stateless.StatelessFacadSessionRemote");
 			statelessRemote.increment();
 			statelessRemote.increment();
 			System.out.println(statelessRemote.count());
@@ -50,7 +51,7 @@ public class JunitTest {
 			System.out.println("===================");
 			System.out.println("      Stateful:    ");
 			System.out.println("===================");
-			StatefulFacadSessionRemote statefulRemote = (StatefulFacadSessionRemote) context.lookup("/jee/jee-ejb/StatefulFacadSessionBean!facades.StatefulFacadSessionRemote");
+			StatefulFacadSessionRemote statefulRemote = (StatefulFacadSessionRemote) context.lookup("/jee/jee-ejb/StatefulFacadSessionBean!facades.stateful.StatefulFacadSessionRemote");
 			statefulRemote.increment();
 			statefulRemote.increment();
 			System.out.println(statefulRemote.count());
